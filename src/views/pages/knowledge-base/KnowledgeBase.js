@@ -10,6 +10,8 @@ import Breadcrumbs from '@components/breadcrumbs'
 
 // ** Demo Components
 import KnowledgeBaseHeader from './KnowledgeBaseHeader'
+import FaqContact from './HaveQuestion'
+import UsersList from './StatisticList'
 
 // ** Reactstrap Imports
 import { Row, Col, Card, CardBody, CardImg } from 'reactstrap'
@@ -64,6 +66,9 @@ const KnowledgeBase = () => {
           <Row className='kb-search-content-info match-height'>{renderContent()}</Row>
         </div>
       ) : null}
+      <UsersList />
+            <FaqContact />
+
     </Fragment>
   )
 }

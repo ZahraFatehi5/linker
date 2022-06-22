@@ -21,9 +21,9 @@ export const useRTL = () => {
 
     // ** If isRTL then add attr dir='rtl' with HTML else attr dir='ltr'
     if (isRtl) {
-      element.setAttribute('dir', 'rtl')
-    } else {
       element.setAttribute('dir', 'ltr')
+    } else {
+      element.setAttribute('dir', 'rtl')
     }
   }, [isRtl])
 

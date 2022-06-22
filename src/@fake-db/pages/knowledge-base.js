@@ -3,48 +3,48 @@ import mock from '../mock'
 const data = {
   // knowledge base
   knowledgeBase: [
-    {
-      id: 1,
-      category: 'sales-automation',
-      img: require('@src/assets/images/illustration/sales.svg').default,
-      title: 'Sales Automation',
-      desc: 'There is perhaps no better demonstration of the folly of image of our tiny world.'
-    },
+    // {
+    //   id: 1,
+    //   category: 'sales-automation',
+    //   img: require('@src/assets/images/illustration/sales.svg').default,
+    //   title: 'Sales Automation',
+    //   desc: 'There is perhaps no better demonstration of the folly of image of our tiny world.'
+    // },
     {
       id: 2,
       category: 'marketing-automation',
       img: require('@src/assets/images/illustration/marketing.svg').default,
-      title: 'Marketing Automation',
+      title: 'منتورشیپ آنلاین',
       desc: 'Look again at that dot. That’s here. That’s home. That’s us. On it everyone you love.'
     },
     {
       id: 3,
       category: 'api-questions',
       img: require('@src/assets/images/illustration/api.svg').default,
-      title: 'API Questions',
+      title: 'فضای یادگیری همکارانه',
       desc: 'every hero and coward, every creator and destroyer of civilization.'
     },
     {
       id: 4,
       category: 'personalization',
       img: require('@src/assets/images/illustration/personalization.svg').default,
-      title: 'Personalization',
+      title: 'استخدام شدن و استخدام کردن',
       desc: 'It has been said that astronomy is a humbling and character experience.'
-    },
-    {
-      id: 5,
-      category: 'email-marketing',
-      img: require('@src/assets/images/illustration/email.svg').default,
-      title: 'Email Marketing',
-      desc: 'There is perhaps no better demonstration of the folly of human conceits.'
-    },
-    {
-      id: 6,
-      category: 'demand-generation',
-      img: require('@src/assets/images/illustration/demand.svg').default,
-      title: 'Demand Generation',
-      desc: 'Competent means we will never take anything for granted.'
     }
+    // {
+    //   id: 5,
+    //   category: 'email-marketing',
+    //   img: require('@src/assets/images/illustration/email.svg').default,
+    //   title: 'Email Marketing',
+    //   desc: 'There is perhaps no better demonstration of the folly of human conceits.'
+    // },
+    // {
+    //   id: 6,
+    //   category: 'demand-generation',
+    //   img: require('@src/assets/images/illustration/demand.svg').default,
+    //   title: 'Demand Generation',
+    //   desc: 'Competent means we will never take anything for granted.'
+    // }
   ],
   categoryData: [
     {
