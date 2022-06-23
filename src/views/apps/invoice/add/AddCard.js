@@ -407,7 +407,7 @@ const AddCard = () => {
             <Label for='customer-name' className='form-label'>
               Customer Name
             </Label>
-            <Input id='customer-name' placeholder='زهرا فاتحیe' />
+            <Input id='customer-name' placeholder='زهرا فاتحی' />
           </div>
           <div className='mb-2'>
             <Label for='customer-email' className='form-label'>

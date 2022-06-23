@@ -5,14 +5,13 @@ import { Fragment, useState, useEffect } from 'react'
 // ** Third Party Components
 import axios from 'axios'
 
-// ** Custom Components
-import Breadcrumbs from '@components/breadcrumbs'
-
 // ** Demo Components
 import KnowledgeBaseHeader from './KnowledgeBaseHeader'
 import FaqContact from './HaveQuestion'
 import UsersList from './StatisticList'
-
+import NavbarComponent from '../../../@core/layouts/components/navbar'
+// /home/zahra/Desktop/eCommerce/full-version/full-version/src/views/pages/knowledge-base/KnowledgeBase.js
+// /home/zahra/Desktop/eCommerce/full-version/full-version/src/@core/layouts/components/navbar/NavbarUser.js
 // ** Reactstrap Imports
 import { Row, Col, Card, CardBody, CardImg } from 'reactstrap'
 
@@ -58,7 +57,11 @@ const KnowledgeBase = () => {
   }
 
   return (
-    <Fragment>
+    <div style={{margin:100}}>
+      <div className='header-navbar navbar-fixed align-items-center navbar-shadow navbar-brand-center'>
+      <div className='navbar-container d-flex content'>
+
+      <NavbarComponent /></div></div>
       {/* <Breadcrumbs breadCrumbTitle='Knowledge Base' breadCrumbParent='Pages' breadCrumbActive='Knowledge Base' /> */}
       <KnowledgeBaseHeader searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {data !== null ? (
@@ -69,7 +72,7 @@ const KnowledgeBase = () => {
       <UsersList />
             <FaqContact />
 
-    </Fragment>
+    </div>
   )
 }
 
