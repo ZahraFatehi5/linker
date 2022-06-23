@@ -47,11 +47,25 @@ import {
 // }
 
 // ** renders client column
-const renderClient = row => {
+const renderClient = (row) => {
   const stateNum = Math.floor(Math.random() * 6),
-    states = ['light-success', 'light-danger', 'light-warning', 'light-info', 'light-primary', 'light-secondary'],
+    states = [
+      'light-success',
+      'light-danger',
+      'light-warning',
+      'light-info',
+      'light-primary',
+      'light-secondary'
+    ],
     color = states[stateNum]
-    return <Avatar color={color} className='me-50' content={row.client ? row.client.name : 'زهرا فاتحیe'} initials />
+  return (
+    <Avatar
+      color={color}
+      className="me-50"
+      content={row.client ? row.client.name : 'زهرا فاتحیe'}
+      initials
+    />
+  )
 }
 
 // ** Table columns
@@ -93,13 +107,13 @@ export const columns = [
     minWidth: '350px',
     sortField: 'client.name',
     // selector: row => row.client.name,
-    cell: row => {
+    cell: (row) => {
       const name = row.client ? row.client.name : 'زهرا فاتحی'
       return (
-        <div className='d-flex justify-content-left align-items-center'>
+        <div className="d-flex justify-content-left align-items-center">
           {renderClient(row)}
-          <div className='d-flex flex-column'>
-            <h6 className='user-name text-truncate mb-0'>{name}</h6>
+          <div className="d-flex flex-column">
+            <h6 className="user-name text-truncate mb-0">{name}</h6>
           </div>
         </div>
       )
@@ -111,15 +125,27 @@ export const columns = [
     minWidth: '200px',
     sortField: 'balance',
     // selector: row => row.balance,
-    cell: row => {
+    cell: (row) => {
       const stateNum = Math.floor(Math.random() * 6),
-      states = ['light-success', 'light-danger', 'light-warning', 'light-info', 'light-primary', 'light-secondary'],
-      color = states[stateNum]
-      return row.balance.length > 0 && row.balance.map((skill, index) => {
-        return <Badge key={index} color={color} pill className='me-50'>
-            {skill}
-          </Badge>
-      })
+        states = [
+          'light-success',
+          'light-danger',
+          'light-warning',
+          'light-info',
+          'light-primary',
+          'light-secondary'
+        ],
+        color = states[stateNum]
+      return (
+        row.balance.length > 0 &&
+        row.balance.map((skill, index) => {
+          return (
+            <Badge key={index} color={color} pill className="me-50">
+              {skill}
+            </Badge>
+          )
+        })
+      )
       //   <span>{row.balance}</span>
       // ) : (
       //   <Badge color='light-success' pill>
@@ -134,7 +160,7 @@ export const columns = [
     minWidth: '500px',
     sortField: 'total',
     // selector: row => row.total,
-    cell: row => <span>{row.total}</span>
+    cell: (row) => <span>{row.total}</span>
   },
   // {
   //   sortable: true,
@@ -147,10 +173,14 @@ export const columns = [
   {
     name: '',
     minWidth: '50px',
-    cell: row => (
-      <div className='column-action d-flex align-items-center'>
-        <Send className='cursor-pointer' size={17} id={`send-tooltip-${row.id}`} />
-        <UncontrolledTooltip placement='top' target={`send-tooltip-${row.id}`}>
+    cell: (row) => (
+      <div className="column-action d-flex align-items-center">
+        <Send
+          className="cursor-pointer"
+          size={17}
+          id={`send-tooltip-${row.id}`}
+        />
+        <UncontrolledTooltip placement="top" target={`send-tooltip-${row.id}`}>
           برقراری ارتباط
         </UncontrolledTooltip>
         {/* <Link to={`/apps/invoice/preview/${row.id}`} id={`pw-tooltip-${row.id}`}>

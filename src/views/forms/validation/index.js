@@ -1,22 +1,25 @@
 // ** React Imports
-import { Fragment } from 'react'
+import { Fragment } from "react"
 
 // ** Custom Components
-import Breadcrumbs from '@components/breadcrumbs'
+import Breadcrumbs from "@components/breadcrumbs"
 
 // ** Demo Components
-import BasicHookForm from './BasicHookForm'
-
+import BasicHookForm from "./BasicHookForm"
 
 const ReactHookForm = () => {
   return (
     <Fragment>
-      <Breadcrumbs breadCrumbTitle='React Hook Form' breadCrumbParent='Form' breadCrumbActive='React Hook Form' />
+      <Breadcrumbs
+        breadCrumbTitle="React Hook Form"
+        breadCrumbParent="Form"
+        breadCrumbActive="React Hook Form"
+      />
       {/* <Row className='match-height'> */}
-        {/* <Col lg='6' md='12'> */}
-          <BasicHookForm />
-        {/* </Col> */}
-        {/* <Col lg='6' md='12'>
+      {/* <Col lg='6' md='12'> */}
+      <BasicHookForm />
+      {/* </Col> */}
+      {/* <Col lg='6' md='12'>
           <ValidationThirdPartyComponents />
         </Col>
         <Col lg='6' md='12'>
