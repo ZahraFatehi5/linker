@@ -100,7 +100,7 @@ const AnalyticsDashboard = () => {
         <div className='d-flex align-items-center'>
           <Avatar img={ceo} />
           <div className='ms-50'>
-            <h6 className='mb-0'>John Doe (Client)</h6>
+            <h6 className='mb-0'>زهرا فاتحیe (Client)</h6>
             <span>CEO of Infibeam</span>
           </div>
         </div>

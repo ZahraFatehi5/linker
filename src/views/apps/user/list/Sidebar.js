@@ -140,7 +140,7 @@ const SidebarNewUsers = ({ open, toggleSidebar }) => {
             name='fullName'
             control={control}
             render={({ field }) => (
-              <Input id='fullName' placeholder='John Doe' invalid={errors.fullName && true} {...field} />
+              <Input id='fullName' placeholder='زهرا فاتحیe' invalid={errors.fullName && true} {...field} />
             )}
           />
         </div>

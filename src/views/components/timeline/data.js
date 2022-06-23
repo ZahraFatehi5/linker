@@ -77,7 +77,7 @@ export const basicData = [
       <div className='d-flex align-items-center'>
         <Avatar img={ceo} imgHeight='38' imgWidth='38' />
         <div className='ms-50'>
-          <h6 className='mb-0'>John Doe (Client)</h6>
+          <h6 className='mb-0'>زهرا فاتحیe (Client)</h6>
           <span>CEO of Infibeam</span>
         </div>
       </div>
@@ -223,7 +223,7 @@ export const iconsData = [
       <div className='d-flex align-items-center'>
         <Avatar img={ceo} imgHeight='38' imgWidth='38' />
         <div className='ms-50'>
-          <h6 className='mb-0'>John Doe (Client)</h6>
+          <h6 className='mb-0'>زهرا فاتحیe (Client)</h6>
           <span>CEO of Infibeam</span>
         </div>
       </div>

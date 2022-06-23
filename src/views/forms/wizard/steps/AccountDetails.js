@@ -20,7 +20,7 @@ const AccountDetails = ({ stepper, type }) => {
             <Label className='form-label' for={`username-${type}`}>
               Username
             </Label>
-            <Input type='text' name={`username-${type}`} id={`username-${type}`} placeholder='johndoe' />
+            <Input type='text' name={`username-${type}`} id={`username-${type}`} placeholder='زهرا فاتحی' />
           </Col>
           <Col md='6' className='mb-1'>
             <Label className='form-label' for={`email-${type}`}>

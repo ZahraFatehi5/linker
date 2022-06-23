@@ -59,7 +59,7 @@ const KnowledgeBase = () => {
 
   return (
     <Fragment>
-      <Breadcrumbs breadCrumbTitle='Knowledge Base' breadCrumbParent='Pages' breadCrumbActive='Knowledge Base' />
+      {/* <Breadcrumbs breadCrumbTitle='Knowledge Base' breadCrumbParent='Pages' breadCrumbActive='Knowledge Base' /> */}
       <KnowledgeBaseHeader searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {data !== null ? (
         <div id='knowledge-base-content'>

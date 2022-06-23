@@ -1,9 +1,6 @@
-// ** Icons Imports
-// import { Search } from 'react-feather'
-
-// ** Reactstrap Imports
-// import { Card, CardBody, CardText, Form, Input, InputGroup, InputGroupText } from 'reactstrap'
 import { Row, Col, Button } from 'reactstrap'
+import { Link } from 'react-router-dom'
+
 
 import trialSvg from '@src/assets/images/illustration/pricing-Illustration.svg'
 
@@ -36,8 +33,11 @@ const FaqFilter = () => {
             <h5>فضایی برای یادگیری، رشد حرفه‌ای و همگرایی توسعه‌دهندگان
 </h5>
             <div className='mt-2 mt-lg-3'>
-              <Button  color='primary'>عضویت</Button>
-              <Button className='ms-1' outline>ورود</Button>
+            <Link to='/pages/register-basic'>
+            <Button  color='primary'>عضویت</Button>
+                  </Link>
+                  <Link to='/pages/login-basic'>
+              <Button className='ms-1' outline>ورود</Button></Link>
             </div>
           </div>
          

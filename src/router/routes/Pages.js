@@ -16,6 +16,21 @@ const PagesRoutes = [
     layout: 'BlankLayout'
   },
   {
+    path:'/form/information-form',
+    component:lazy(() => import('../../views/forms/validation/BasicHookForm')),
+    layout:'BlankLayout'
+  },
+  {
+    path:'/form/user-table',
+    component:lazy(() => import('../../views/forms/validation/invoice/list/index')),
+    layout:'BlankLayout'
+  },
+  {
+    path:'/landing',
+    component:lazy(() => import('../../views/pages/knowledge-base/KnowledgeBase')),
+    layout:'BlankLayout'
+  },
+  {
     path: '/pages/login-cover',
     component: lazy(() => import('../../views/pages/authentication/LoginCover')),
     layout: 'BlankLayout'

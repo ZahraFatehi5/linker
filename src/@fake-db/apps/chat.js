@@ -7,7 +7,7 @@ const data = {
   profileUser: {
     id: 11,
     avatar: require('@src/assets/images/portrait/small/avatar-s-11.jpg').default,
-    fullName: 'John Doe',
+    fullName: 'زهرا فاتحی',
     role: 'admin',
     about:
       'Dessert chocolate cake lemon drops jujubes. Biscuit cupcake ice cream bear claw brownie brownie marshmallow.',

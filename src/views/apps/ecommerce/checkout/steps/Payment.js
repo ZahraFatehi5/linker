@@ -19,7 +19,7 @@ const Payment = () => {
             <CardText className='text-muted mt-25'>Be sure to click on correct payment option</CardText>
           </CardHeader>
           <CardBody>
-            <h6 className='card-holder-name my-75'>John Doe</h6>
+            <h6 className='card-holder-name my-75'>زهرا فاتحیe</h6>
             <div className='form-check mb-2'>
               <Input defaultChecked id='us-card' type='radio' name='paymentMethod' />
               <Label className='form-check-label' htmlFor='us-card'>

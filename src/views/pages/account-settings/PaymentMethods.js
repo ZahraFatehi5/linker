@@ -175,7 +175,7 @@ const PaymentMethods = () => {
                       <Label className='form-label' for='card-name'>
                         Name On Card
                       </Label>
-                      <Input id='card-name' placeholder='John Doe' />
+                      <Input id='card-name' placeholder='زهرا فاتحیe' />
                     </Col>
                     <Col xs={6} md={3}>
                       <Label className='form-label' for='exp-date'>
@@ -310,7 +310,7 @@ const PaymentMethods = () => {
               <Label className='form-label' for='card-name'>
                 Name On Card
               </Label>
-              <Input id='card-name' placeholder='John Doe' defaultValue={selectedCondition ? selected.name : ''} />
+              <Input id='card-name' placeholder='زهرا فاتحیe' defaultValue={selectedCondition ? selected.name : ''} />
             </Col>
             <Col xs={6} md={3}>
               <Label className='form-label' for='exp-date'>

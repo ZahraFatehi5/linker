@@ -68,26 +68,26 @@ const LoginBasic = () => {
                   </g>
                 </g>
               </svg>
-              <h2 className='brand-text text-primary ms-1'>Vuexy</h2>
+              <h2 className='brand-text text-primary ms-1'>لینکر</h2>
             </Link>
             <CardTitle tag='h4' className='mb-1'>
-              Welcome to Vuexy! 👋
+              به لینکر خوش اومدی! 👋
             </CardTitle>
-            <CardText className='mb-2'>Please sign-in to your account and start the adventure</CardText>
+            <CardText className='mb-2'>لطفا وارد حساب کاربری خود شوید</CardText>
             <Form className='auth-login-form mt-2' onSubmit={e => e.preventDefault()}>
               <div className='mb-1'>
                 <Label className='form-label' for='login-email'>
-                  Email
+                  ایمیل
                 </Label>
-                <Input type='email' id='login-email' placeholder='john@example.com' autoFocus />
+                <Input type='email' id='login-email' placeholder='ali@example.com' autoFocus />
               </div>
               <div className='mb-1'>
                 <div className='d-flex justify-content-between'>
                   <Label className='form-label' for='login-password'>
-                    Password
+                    رمزعبور
                   </Label>
                   <Link to='/pages/forgot-password-basic'>
-                    <small>Forgot Password?</small>
+                    <small>فراموشی رمز؟</small>
                   </Link>
                 </div>
                 <InputPasswordToggle className='input-group-merge' id='login-password' />
@@ -95,23 +95,25 @@ const LoginBasic = () => {
               <div className='form-check mb-1'>
                 <Input type='checkbox' id='remember-me' />
                 <Label className='form-check-label' for='remember-me'>
-                  Remember Me
-                </Label>
+مرا به خاطر بسپار              
+  </Label>
               </div>
+              <Link to='/form/information-form'>
+
               <Button color='primary' block>
-                Sign in
-              </Button>
+ورود        
+      </Button></Link>
             </Form>
             <p className='text-center mt-2'>
-              <span className='me-25'>New on our platform?</span>
+              <span className='me-25'>هنوز ثبت نام نکرده اید؟</span>
               <Link to='/pages/register-basic'>
-                <span>Create an account</span>
+                <span>ساخت حساب کاربری</span>
               </Link>
             </p>
-            <div className='divider my-2'>
+            {/* <div className='divider my-2'>
               <div className='divider-text'>or</div>
-            </div>
-            <div className='auth-footer-btn d-flex justify-content-center'>
+            </div> */}
+            {/* <div className='auth-footer-btn d-flex justify-content-center'>
               <Button color='facebook'>
                 <Facebook size={14} />
               </Button>
@@ -124,7 +126,7 @@ const LoginBasic = () => {
               <Button className='me-0' color='github'>
                 <GitHub size={14} />
               </Button>
-            </div>
+            </div> */}
           </CardBody>
         </Card>
       </div>

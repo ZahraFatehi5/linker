@@ -75,7 +75,7 @@ const Login = () => {
           ability.update(res.data.userData.ability)
           history.push(getHomeRouteForLoggedInUser(data.role))
           toast.success(
-            <ToastContent name={data.fullName || data.username || 'John Doe'} role={data.role || 'admin'} />,
+            <ToastContent name={data.fullName || data.username || 'زهرا فاتحیe'} role={data.role || 'admin'} />,
             { icon: false, transition: Slide, hideProgressBar: true, autoClose: 2000 }
           )
         })

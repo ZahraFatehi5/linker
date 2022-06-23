@@ -147,7 +147,7 @@ const NotificationDropdown = () => {
       <DropdownToggle tag='a' className='nav-link' href='/' onClick={e => e.preventDefault()}>
         <Bell size={21} />
         <Badge pill color='danger' className='badge-up'>
-          5
+          1
         </Badge>
       </DropdownToggle>
       <DropdownMenu end tag='ul' className='dropdown-menu-media mt-0'>
@@ -155,14 +155,14 @@ const NotificationDropdown = () => {
           <DropdownItem className='d-flex' tag='div' header>
             <h4 className='notification-title mb-0 me-auto'>Notifications</h4>
             <Badge tag='div' color='light-primary' pill>
-              6 New
+              1 New
             </Badge>
           </DropdownItem>
         </li>
-        {renderNotificationItems()}
+        {/* سس{renderNotificationItems()} */}
         <li className='dropdown-menu-footer'>
           <Button color='primary' block>
-            Read all notifications
+      خواندن تمام اعلان ها
           </Button>
         </li>
       </DropdownMenu>

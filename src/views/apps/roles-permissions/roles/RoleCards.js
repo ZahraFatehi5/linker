@@ -68,7 +68,7 @@ const data = [
       },
       {
         size: 'sm',
-        title: 'John Doe',
+        title: 'زهرا فاتحیe',
         img: require('@src/assets/images/avatars/1.png').default
       },
       {

@@ -285,7 +285,7 @@ const data = {
           },
           {
             img: require('@src/assets/images/portrait/small/avatar-s-11.jpg').default,
-            username: 'John Doe'
+            username: 'زهرا فاتحیe'
           }
         ]
       },

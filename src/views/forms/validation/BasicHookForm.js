@@ -1,5 +1,6 @@
 // ** React Imports
 import { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 
 // ** Third Party Components
 import { Check } from 'react-feather'
@@ -8,9 +9,22 @@ import { useForm, Controller } from 'react-hook-form'
 
 // ** Custom Components
 import Avatar from '@components/avatar'
+import { selectThemeColors } from '@utils'
+
+import TextareaDefault from './TextareaDefault'
 
 // ** Reactstrap Imports
 import { Card, CardHeader, CardTitle, CardBody, Button, Label, Input, Form } from 'reactstrap'
+import Select from 'react-select'
+
+const skills = [
+  { value: 'devOps', label: 'devOps',  isFixed: true },
+  { value: 'Front end', label: 'Front end', isFixed: true },
+  { value: 'Back end', label: 'Back end',  isFixed: true },
+  { value: 'UI/UX', label: 'UI/UX', isFixed: false },
+  { value: 'Andriod', label: 'Andriod',  isFixed: false },
+  { value: 'ios', label: 'ios', isFixed: false }
+]
 
 const BasicHookForm = () => {
   // ** Hooks
@@ -29,19 +43,20 @@ const BasicHookForm = () => {
           <div className='toastify-header'>
             <div className='title-wrapper'>
               <Avatar size='sm' color='success' icon={<Check size={12} />} />
-              <h6 className='toast-title'>Form Submitted!</h6>
+              <h6 className='toast-title'>اطلاعات ذخیره شد</h6>
             </div>
           </div>
           <div className='toastify-body'>
             <ul className='list-unstyled mb-0'>
               <li>
-                <strong>firstName</strong>: {data.firstNameBasic}
+                <strong>نام</strong>: {data.firstNameBasic}
               </li>
               <li>
-                <strong>lastName</strong>: {data.lastNameBasic}
+                <strong>نام خانوادگی</strong>: {data.lastNameBasic}
               </li>
               <li>
-                <strong>email</strong>: {data.emailBasic}
+                .....
+                {/* <strong>مهارت ها</strong>: {(data.skill)[0]} */}
               </li>
             </ul>
           </div>
@@ -61,7 +76,7 @@ const BasicHookForm = () => {
 
   const handleReset = () => {
     reset({
-      emailBasic: '',
+      skill: '',
       firstNameBasic: '',
       lastNameBasic: ''
     })
@@ -70,39 +85,56 @@ const BasicHookForm = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Basic</CardTitle>
+        <CardTitle tag='h4'>اطلاعات مورد نیاز برای پیدا کردن هم تیمی</CardTitle>
       </CardHeader>
       <CardBody>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <div className='mb-1'>
             <Label className='form-label' for='firstNameBasic'>
-              First Name
+نام
             </Label>
             <Controller
               defaultValue=''
               control={control}
               id='firstNameBasic'
               name='firstNameBasic'
-              render={({ field }) => <Input placeholder='Bruce' invalid={errors.firstNameBasic && true} {...field} />}
+              render={({ field }) => <Input invalid={errors.firstNameBasic && true} {...field} />}
             />
           </div>
           <div className='mb-1'>
             <Label className='form-label' for='lastNameBasic'>
-              Last Name
+              نام خانوادگی
             </Label>
             <Controller
               defaultValue=''
               control={control}
               id='lastNameBasic'
               name='lastNameBasic'
-              render={({ field }) => <Input placeholder='Wayne' invalid={errors.lastNameBasic && true} {...field} />}
+              render={({ field }) => <Input invalid={errors.lastNameBasic && true} {...field} />}
             />
           </div>
-          <div className='mb-1'>
+          <div>
             <Label className='form-label' for='emailBasic'>
-              Email
+              در چه زمینه هایی مهارت داری یا دوست داری مهارت یادبگیری؟
             </Label>
             <Controller
+              defaultValue=''
+              control={control}
+              id='skill'
+              name='skill'
+              render={({ field }) => (
+            <Select
+              isClearable={false}
+              theme={selectThemeColors}
+              defaultValue={[skills[2], skills[3]]}
+              isMulti
+              name='colors'
+              options={skills}
+              className='react-select'
+              classNamePrefix='select'
+              {...field}
+            />)}/>
+            {/* <Controller
               defaultValue=''
               control={control}
               id='emailBasic'
@@ -115,14 +147,25 @@ const BasicHookForm = () => {
                   {...field}
                 />
               )}
+            /> */}
+          </div>
+          <div className='mb-1'>
+            <Controller
+              defaultValue=''
+              control={control}
+              id='lastNameBasic'
+              name='lastNameBasic'
+              render={() => <TextareaDefault />}
             />
           </div>
           <div className='d-flex'>
+          <Link to='/form/user-table'>
+
             <Button className='me-1' color='primary' type='submit'>
-              Submit
-            </Button>
+              ذخیره
+            </Button></Link>
             <Button outline color='secondary' type='reset' onClick={handleReset}>
-              Reset
+              بازنشانی
             </Button>
           </div>
         </Form>

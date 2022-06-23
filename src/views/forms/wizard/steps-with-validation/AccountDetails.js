@@ -64,7 +64,7 @@ const AccountDetails = ({ stepper }) => {
               id='username'
               name='username'
               control={control}
-              render={({ field }) => <Input placeholder='johndoe' invalid={errors.username && true} {...field} />}
+              render={({ field }) => <Input placeholder='زهرا فاتحی' invalid={errors.username && true} {...field} />}
             />
             {errors.username && <FormFeedback>{errors.username.message}</FormFeedback>}
           </Col>

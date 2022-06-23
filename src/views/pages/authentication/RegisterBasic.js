@@ -68,32 +68,32 @@ const RegisterBasic = () => {
                   </g>
                 </g>
               </svg>
-              <h2 className='brand-text text-primary ms-1'>Vuexy</h2>
+              <h2 className='brand-text text-primary ms-1'>لینکر</h2>
             </Link>
             <CardTitle tag='h4' className='mb-1'>
-              Adventure starts here 🚀
+             به لینکر خوش اومدی ! 👋
             </CardTitle>
-            <CardText className='mb-2'>Make your app management easy and fun!</CardText>
+            <CardText className='mb-2'>لطفا حساب کاربری خود را بسازید</CardText>
             <Form className='auth-register-form mt-2' onSubmit={e => e.preventDefault()}>
               <div className='mb-1'>
                 <Label className='form-label' for='register-username'>
-                  Username
+                  نام کاربری
                 </Label>
                 <Input type='text' id='register-username' placeholder='johndoe' autoFocus />
               </div>
               <div className='mb-1'>
                 <Label className='form-label' for='register-email'>
-                  Email
+                  ایمیل
                 </Label>
                 <Input type='email' id='register-email' placeholder='john@example.com' />
               </div>
               <div className='mb-1'>
                 <Label className='form-label' for='register-password'>
-                  Password
+                  رمزعبور
                 </Label>
                 <InputPasswordToggle className='input-group-merge' id='register-password' />
               </div>
-              <div className='form-check mb-1'>
+              {/* <div className='form-check mb-1'>
                 <Input type='checkbox' id='terms' />
                 <Label className='form-check-label' for='terms'>
                   I agree to
@@ -101,18 +101,20 @@ const RegisterBasic = () => {
                     privacy policy & terms
                   </a>
                 </Label>
-              </div>
+              </div> */}
+                            <Link to='/pages/login-basic'>
+
               <Button color='primary' block>
-                Sign up
-              </Button>
+ثبت نام
+              </Button></Link>
             </Form>
             <p className='text-center mt-2'>
-              <span className='me-25'>Already have an account?</span>
+              <span className='me-25'>قبلا حساب کاربری ساخته اید؟</span>
               <Link to='/pages/login-basic'>
-                <span>Sign in instead</span>
+                <span>وارد شوید</span>
               </Link>
             </p>
-            <div className='divider my-2'>
+            {/* <div className='divider my-2'>
               <div className='divider-text'>or</div>
             </div>
             <div className='auth-footer-btn d-flex justify-content-center'>
@@ -128,7 +130,7 @@ const RegisterBasic = () => {
               <Button className='me-0' color='github'>
                 <GitHub size={14} />
               </Button>
-            </div>
+            </div> */}
           </CardBody>
         </Card>
       </div>
