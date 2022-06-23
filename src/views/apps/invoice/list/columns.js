@@ -62,7 +62,7 @@ const renderClient = (row) => {
     <Avatar
       color={color}
       className="me-50"
-      content={row.client ? row.client.name : 'زهرا فاتحیe'}
+      content={row.client ? row.client.name : 'زهرا فاتحی'}
       initials
     />
   )

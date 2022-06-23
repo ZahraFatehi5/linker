@@ -106,10 +106,10 @@ const RegisterBasic = () => {
                   </g>
                 </g>
               </svg>
-              <h2 className="brand-text text-primary ms-1">لینکر</h2>
+              <h2 className="brand-text text-primary ms-1">Vuexy</h2>
             </Link>
             <CardTitle tag="h4" className="mb-1">
-              به لینکر خوش اومدی ! 👋
+              به لینکر خوش آمدید ! 👋
             </CardTitle>
             <CardText className="mb-2">لطفا حساب کاربری خود را بسازید</CardText>
             <Form

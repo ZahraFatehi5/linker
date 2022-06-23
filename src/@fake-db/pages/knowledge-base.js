@@ -15,21 +15,22 @@ const data = {
       category: 'marketing-automation',
       img: require('@src/assets/images/illustration/marketing.svg').default,
       title: 'منتورشیپ آنلاین',
-      desc: 'Look again at that dot. That’s here. That’s home. That’s us. On it everyone you love.'
+      desc: ' برنامه‌نویسی را آنلاین و به کمک باتجربه ها یاد بگیرید و از راهنمایی‌های آنان بهره‌مند شوید  '
     },
     {
       id: 3,
       category: 'api-questions',
       img: require('@src/assets/images/illustration/api.svg').default,
       title: 'فضای یادگیری همکارانه',
-      desc: 'every hero and coward, every creator and destroyer of civilization.'
+      desc: 'هم تیمی خود را پیدا کنید و در کنار هم علاوه بر برنامه نویسی، کار گروهی را نیز تجربه کنید'
     },
     {
       id: 4,
       category: 'personalization',
-      img: require('@src/assets/images/illustration/personalization.svg').default,
+      img: require('@src/assets/images/illustration/personalization.svg')
+        .default,
       title: 'استخدام شدن و استخدام کردن',
-      desc: 'It has been said that astronomy is a humbling and character experience.'
+      desc: 'با فعالیت‌هایتان رزومه خود را تقویت کنید و در برترین شرکت‌ها استخدام شوید'
     }
     // {
     //   id: 5,

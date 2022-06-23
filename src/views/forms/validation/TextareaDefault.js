@@ -6,7 +6,8 @@ const TextareaDefault = () => {
     <Card>
       <CardBody style={{ marginRight: '-20px' }}>
         <Label className="form-label" for="lastNameBasic">
-          چه چیزهای دیگه ایی هست که موقع هم تیمی پیدا کردن برات مهمه{' '}
+          اطلاعات دیگری که به نظرتان برای پیدا کردن هم تیمی مناسب باید داشت را
+          وارد کنید{' '}
         </Label>
         <Input type="textarea" name="text" id="exampleText" rows="3" />
       </CardBody>

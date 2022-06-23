@@ -106,10 +106,10 @@ const LoginBasic = () => {
                   </g>
                 </g>
               </svg>
-              <h2 className="brand-text text-primary ms-1">لینکر</h2>
+              <h2 className="brand-text text-primary ms-1">Vuexy</h2>
             </Link>
             <CardTitle tag="h4" className="mb-1">
-              به لینکر خوش اومدی! 👋
+              به لینکر خوش آمدید! 👋
             </CardTitle>
             <CardText className="mb-2">لطفا وارد حساب کاربری خود شوید</CardText>
             <Form
@@ -133,7 +133,7 @@ const LoginBasic = () => {
                     رمزعبور
                   </Label>
                   <Link to="/pages/forgot-password-basic">
-                    <small>فراموشی رمز؟</small>
+                    <small> رمز خود را فراموش کرده اید؟</small>
                   </Link>
                 </div>
                 <InputPasswordToggle

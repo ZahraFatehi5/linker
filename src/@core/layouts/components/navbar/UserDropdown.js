@@ -9,21 +9,35 @@ import Avatar from '@components/avatar'
 import { isUserLoggedIn } from '@utils'
 
 // ** Store & Actions
-import { useDispatch } from 'react-redux'
-import { handleLogout } from '@store/authentication'
+// import { useDispatch } from 'react-redux'
+// import { handleLogout } from '@store/authentication'
 
 // ** Third Party Components
-import { User, Mail, CheckSquare, MessageSquare, Settings, CreditCard, HelpCircle, Power } from 'react-feather'
+import {
+  User,
+  Mail,
+  CheckSquare,
+  MessageSquare,
+  Settings,
+  CreditCard,
+  HelpCircle,
+  Power
+} from 'react-feather'
 
 // ** Reactstrap Imports
-import { UncontrolledDropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap'
+import {
+  UncontrolledDropdown,
+  DropdownMenu,
+  DropdownToggle,
+  DropdownItem
+} from 'reactstrap'
 
 // ** Default Avatar Image
-import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
+// import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
 
 const UserDropdown = () => {
   // ** Store Vars
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
   // ** State
   const [userData, setUserData] = useState(null)
@@ -36,15 +50,31 @@ const UserDropdown = () => {
   }, [])
 
   //** Vars
-  const userAvatar = (userData && userData.avatar) || defaultAvatar
+  // const userAvatar = (userData && userData.avatar) || defaultAvatar
 
   return (
-    <UncontrolledDropdown tag='li' className='dropdown-user nav-item'>
-      <DropdownToggle href='/' tag='a' className='nav-link dropdown-user-link' onClick={e => e.preventDefault()}>
-        <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' />
-        <div className='user-nav d-sm-flex d-none'>
-          <span className='user-name fw-bold'>{(userData && userData['username']) || 'زهرا فاتحی'}</span>
-          <span className='user-status'>{(userData && userData.role) || 'Admin'}</span>
+    <UncontrolledDropdown tag="li" className="dropdown-user nav-item">
+      <DropdownToggle
+        href="/"
+        tag="a"
+        className="nav-link dropdown-user-link"
+        onClick={(e) => e.preventDefault()}
+      >
+        <Avatar
+          color={'light-info'}
+          imgHeight="40"
+          imgWidth="40"
+          status="online"
+          content={userData ? userData['username'] : 'زهرا فاتحی'}
+          initials
+        />
+        <div className="user-nav d-sm-flex d-none">
+          <span className="user-name fw-bold">
+            {(userData && userData['username']) || 'زهرا فاتحی'}
+          </span>
+          <span className="user-status">
+            {(userData && userData.role) || 'Admin'}
+          </span>
         </div>
       </DropdownToggle>
       <DropdownMenu end>
@@ -65,9 +95,9 @@ const UserDropdown = () => {
           <span className='align-middle'>Chats</span>
         </DropdownItem> */}
         {/* <DropdownItem divider /> */}
-        <DropdownItem tag={Link} to='/pages/account-settings'>
-          <Settings size={14} className='me-75' />
-          <span className='align-middle'>Settings</span>
+        <DropdownItem tag={Link} to="/pages/account-settings">
+          <Settings size={14} className="me-75" />
+          <span className="align-middle">Settings</span>
         </DropdownItem>
         {/* <DropdownItem tag={Link} to='/pages/pricing'>
           <CreditCard size={14} className='me-75' />
@@ -77,9 +107,13 @@ const UserDropdown = () => {
           <HelpCircle size={14} className='me-75' />
           <span className='align-middle'>FAQ</span>
         </DropdownItem> */}
-        <DropdownItem tag={Link} to='/login' onClick={() => dispatch(handleLogout())}>
-          <Power size={14} className='me-75' />
-          <span className='align-middle'>Logout</span>
+        <DropdownItem
+          tag={Link}
+          to="/pages/login-basic"
+          // onClick={() => dispatch(handleLogout())}
+        >
+          <Power size={14} className="me-75" />
+          <span className="align-middle">خروج از حساب کاربری</span>
         </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>
