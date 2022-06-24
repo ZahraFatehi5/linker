@@ -1,15 +1,15 @@
 // ** Dropdowns Imports
-import IntlDropdown from "./IntlDropdown"
-import CartDropdown from "./CartDropdown"
-import UserDropdown from "./UserDropdown"
-import NavbarSearch from "./NavbarSearch"
-import NotificationDropdown from "./NotificationDropdown"
+import IntlDropdown from './IntlDropdown'
+import CartDropdown from './CartDropdown'
+import UserDropdown from './UserDropdown'
+import NavbarSearch from './NavbarSearch'
+import NotificationDropdown from './NotificationDropdown'
 
 // ** Third Party Components
-import { Sun, Moon } from "react-feather"
+import { Sun, Moon } from 'react-feather'
 
 // ** Reactstrap Imports
-import { NavItem, NavLink } from "reactstrap"
+import { NavItem, NavLink } from 'reactstrap'
 
 const NavbarUser = (props) => {
   // ** Props
@@ -17,10 +17,10 @@ const NavbarUser = (props) => {
 
   // ** Function to toggle Theme (Light/Dark)
   const ThemeToggler = () => {
-    if (skin === "dark") {
-      return <Sun className="ficon" onClick={() => setSkin("light")} />
+    if (skin === 'dark') {
+      return <Sun className="ficon" onClick={() => setSkin('light')} />
     } else {
-      return <Moon className="ficon" onClick={() => setSkin("dark")} />
+      return <Moon className="ficon" onClick={() => setSkin('dark')} />
     }
   }
 
@@ -35,7 +35,7 @@ const NavbarUser = (props) => {
       {/* <NavbarSearch /> */}
       {/* <CartDropdown /> */}
       <UserDropdown />
-      <NotificationDropdown />
+      {/* <NotificationDropdown /> */}
     </ul>
   )
 }

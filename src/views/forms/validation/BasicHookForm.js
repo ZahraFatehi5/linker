@@ -177,7 +177,7 @@ const BasicHookForm = () => {
               />
             </div>
             <div className="d-flex">
-              <Link to="/form/user-table">
+              <Link to="/user-table">
                 <Button className="me-1" color="primary" type="submit">
                   ذخیره
                 </Button>

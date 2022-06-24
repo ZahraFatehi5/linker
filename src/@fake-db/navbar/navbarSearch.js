@@ -139,7 +139,7 @@ export const searchArr = [
         isBookmarked: false,
         title: 'Login Basic',
         icon: 'LogIn',
-        link: '/pages/login-basic'
+        link: '/login-basic'
       },
       {
         id: 19,
@@ -155,7 +155,7 @@ export const searchArr = [
         isBookmarked: false,
         title: 'Register Basic',
         icon: 'UserPlus',
-        link: '/pages/register-basic'
+        link: '/register-basic'
       },
       {
         id: 21,

@@ -190,7 +190,7 @@ export default [
             id: 'login-basic',
             title: 'Basic',
             permissions: ['admin', 'editor'],
-            navLink: '/pages/login-basic',
+            navLink: '/login-basic',
             newTab: true
           },
           {
@@ -211,7 +211,7 @@ export default [
             id: 'register-basic',
             title: 'Basic',
             permissions: ['admin', 'editor'],
-            navLink: '/pages/register-basic',
+            navLink: '/register-basic',
             newTab: true
           },
           {

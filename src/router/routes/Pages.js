@@ -11,17 +11,17 @@ const PagesRoutes = [
     }
   },
   {
-    path: '/pages/login-basic',
+    path: '/login-basic',
     component: lazy(() => import('../../views/pages/authentication/LoginBasic')),
     layout: 'BlankLayout'
   },
   {
-    path:'/form/information-form',
+    path:'/information-form',
     component:lazy(() => import('../../views/forms/validation/BasicHookForm')),
     layout:'BlankLayout'
   },
   {
-    path:'/form/user-table',
+    path:'/user-table',
     component:lazy(() => import('../../views/forms/validation/invoice/list/index')),
     layout:'BlankLayout'
   },
@@ -44,7 +44,7 @@ const PagesRoutes = [
     }
   },
   {
-    path: '/pages/register-basic',
+    path: '/register-basic',
     component: lazy(() => import('../../views/pages/authentication/RegisterBasic')),
     layout: 'BlankLayout'
   },

@@ -109,7 +109,7 @@ const UserDropdown = () => {
         </DropdownItem> */}
         <DropdownItem
           tag={Link}
-          to="/pages/login-basic"
+          to="/login-basic"
           // onClick={() => dispatch(handleLogout())}
         >
           <Power size={14} className="me-75" />

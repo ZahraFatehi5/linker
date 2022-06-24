@@ -29,10 +29,10 @@ const FaqFilter = () => {
               <h3 className="text-primary">جامعه توسعه دهندگان ایرانی </h3>
               <h5>فضایی برای برقراری ارتباط بین افراد هم مسیر و هم هدف</h5>
               <div className="mt-2 mt-lg-3">
-                <Link to="/pages/register-basic">
+                <Link to="/register-basic">
                   <Button color="primary mb-1">عضویت</Button>
                 </Link>
-                <Link to="/pages/login-basic">
+                <Link to="/login-basic">
                   <Button className="ms-1 mb-1" outline>
                     ورود
                   </Button>
