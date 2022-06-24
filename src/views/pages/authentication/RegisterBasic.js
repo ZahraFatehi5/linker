@@ -1,12 +1,11 @@
 // ** React Imports
-import { Link } from 'react-router-dom'
-
-// ** Icons Imports
-import { Facebook, Twitter, Mail, GitHub } from 'react-feather'
+import { Link, useHistory } from 'react-router-dom'
 
 // ** Custom Components
 import InputPasswordToggle from '@components/input-password-toggle'
 import { ReactComponent as Icon } from '@src/assets/images/svg/logo.svg'
+
+import { useForm, Controller } from 'react-hook-form'
 
 // ** Reactstrap Imports
 import {
@@ -24,6 +23,28 @@ import {
 import '@styles/react/pages/page-authentication.scss'
 
 const RegisterBasic = () => {
+  const history = useHistory()
+  const {
+    control,
+    setError,
+    handleSubmit,
+    formState: { errors }
+  } = useForm()
+
+  const onSubmit = (data) => {
+    if (Object.values(data).every((field) => field.length > 0)) {
+      history.push('/information-form')
+    } else {
+      for (const key in data) {
+        if (data[key].length === 0) {
+          setError(key, {
+            type: 'manual'
+          })
+        }
+      }
+    }
+  }
+
   return (
     <div className="auth-wrapper auth-basic px-2">
       <div className="auth-inner my-2">
@@ -43,37 +64,66 @@ const RegisterBasic = () => {
             <CardText className="mb-2">لطفا حساب کاربری خود را بسازید</CardText>
             <Form
               className="auth-register-form mt-2"
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubmit(onSubmit)}
             >
               <div className="mb-1">
                 <Label className="form-label" for="register-username">
                   نام کاربری
                 </Label>
-                <Input
+                <Controller
+                defaultValue=""
+                control={control}
+                id="username"
+                name="username"
+                render={({ field }) => (
+                  <Input
                   type="text"
-                  id="register-username"
-                  placeholder="johndoe"
+                  id="username"
                   autoFocus
+                  {...field}
+                  invalid={errors.username && true}
                 />
+                )}/>
               </div>
               <div className="mb-1">
                 <Label className="form-label" for="register-email">
                   ایمیل
                 </Label>
-                <Input
+                <Controller
+                defaultValue=""
+                control={control}
+                id="email"
+                name="email"
+                render={({ field }) => (
+                  <Input
                   type="email"
-                  id="register-email"
-                  placeholder="john@example.com"
+                  id="login-email"
+                  placeholder=""
+                  autoFocus
+                  {...field}
+                  invalid={errors.email && true}
                 />
+                )}
+              />
               </div>
               <div className="mb-1">
                 <Label className="form-label" for="register-password">
                   رمزعبور
                 </Label>
-                <InputPasswordToggle
+                <Controller
+                defaultValue=""
+                control={control}
+                id="pass"
+                name="pass"
+                render={({ field }) => (
+                  <InputPasswordToggle
                   className="input-group-merge"
-                  id="register-password"
-                />
+                  id="pass"
+                  {...field}
+                  invalid={errors.pass && true}
+                /> 
+                )}
+              />
               </div>
               {/* <div className='form-check mb-1'>
                 <Input type='checkbox' id='terms' />
@@ -84,11 +134,11 @@ const RegisterBasic = () => {
                   </a>
                 </Label>
               </div> */}
-              <Link to="/information-form">
+              {/* <Link to="/information-form"> */}
                 <Button color="primary" block>
                   ثبت نام
                 </Button>
-              </Link>
+              {/* </Link> */}
             </Form>
             <p className="text-center mt-2">
               <span className="me-25">قبلا حساب کاربری ساخته اید؟</span>

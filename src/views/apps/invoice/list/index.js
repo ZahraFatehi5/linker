@@ -27,7 +27,7 @@ const CustomHeader = ({ handleFilter, value, handlePerPage, rowsPerPage }) => {
       <Row>
         <Col lg="6" className="d-flex align-items-center px-0 px-lg-1">
           <div className="d-flex align-items-center me-2">
-            <label htmlFor="rows-per-page">Show</label>
+            <label htmlFor="rows-per-page">تعداد سطر جدول در صفحه</label>
             <Input
               type="select"
               id="rows-per-page"

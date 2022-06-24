@@ -26,10 +26,11 @@ const CustomHeader = ({ handleFilter, value, handlePerPage, rowsPerPage }) => {
   return (
     <div className="invoice-list-table-header w-100 py-2">
       <Row>
-        <Col lg="6" className="d-flex align-items-center px-0 px-lg-1">
-          <div className="d-flex align-items-center me-2">
-            <label htmlFor="rows-per-page">Show</label>
+        <Col  className="d-flex flex-lg-nowrap align-items-center ">
+          <div style={{width:'100%'}} className="d-flex align-items-center me-2">
+            <label style={{width:130}} htmlFor="rows-per-page">تعداد سطرهای جدول </label>
             <Input
+            style={{width:200}}
               type="select"
               id="rows-per-page"
               value={rowsPerPage}

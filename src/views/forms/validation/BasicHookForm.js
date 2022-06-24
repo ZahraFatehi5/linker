@@ -1,6 +1,6 @@
 // ** React Imports
 import { Fragment } from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory} from 'react-router-dom'
 
 // ** Third Party Components
 import { Check } from 'react-feather'
@@ -36,6 +36,8 @@ const skills = [
 ]
 
 const BasicHookForm = () => {
+  const history = useHistory()
+
   // ** Hooks
   const {
     reset,
@@ -47,9 +49,10 @@ const BasicHookForm = () => {
 
   const onSubmit = (data) => {
     if (Object.values(data).every((field) => field.length > 0)) {
+      history.push('/user-table')
       toast.success(
         <Fragment>
-          <div className="toastify-header">
+         <div className="toastify-header">
             <div className="title-wrapper">
               <Avatar size="sm" color="success" icon={<Check size={12} />} />
               <h6 className="toast-title">اطلاعات ذخیره شد</h6>
@@ -167,21 +170,21 @@ const BasicHookForm = () => {
               )}
             /> */}
             </div>
-            <div className="mb-1">
-              <Controller
+            <div className="mb-1"><TextareaDefault />
+              {/* <Controller
                 defaultValue=""
                 control={control}
-                id="lastNameBasic"
-                name="lastNameBasic"
+                id="textarea"
+                name="textarea"
                 render={() => <TextareaDefault />}
-              />
+              /> */}
             </div>
             <div className="d-flex">
-              <Link to="/user-table">
+              {/* <Link to="/user-table"> */}
                 <Button className="me-1" color="primary" type="submit">
                   ذخیره
                 </Button>
-              </Link>
+              {/* </Link> */}
               <Button
                 outline
                 color="secondary"

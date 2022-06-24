@@ -95,9 +95,9 @@ const UserDropdown = () => {
           <span className='align-middle'>Chats</span>
         </DropdownItem> */}
         {/* <DropdownItem divider /> */}
-        <DropdownItem tag={Link} to="/pages/account-settings">
+        <DropdownItem tag={Link} to="/information-form">
           <Settings size={14} className="me-75" />
-          <span className="align-middle">Settings</span>
+          <span className="align-middle">تنظیمات</span>
         </DropdownItem>
         {/* <DropdownItem tag={Link} to='/pages/pricing'>
           <CreditCard size={14} className='me-75' />

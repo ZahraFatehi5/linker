@@ -22,7 +22,7 @@ const UsersList = () => {
             color='primary'
             statTitle='Total Users'
             icon={<User size={20} />}
-            renderStats={<h3 className='fw-bolder mb-75'>21,459</h3>}
+            renderStats={<h3 className='fw-bolder mb-75'>5</h3>}
           />
         </Col>
         <Col lg='3' sm='6'>
@@ -30,7 +30,7 @@ const UsersList = () => {
             color='danger'
             statTitle='Paid Users'
             icon={<UserPlus size={20} />}
-            renderStats={<h3 className='fw-bolder mb-75'>4,567</h3>}
+            renderStats={<h3 className='fw-bolder mb-75'>0</h3>}
           />
         </Col>
         <Col lg='3' sm='6'>
@@ -38,7 +38,7 @@ const UsersList = () => {
             color='success'
             statTitle='Active Users'
             icon={<UserCheck size={20} />}
-            renderStats={<h3 className='fw-bolder mb-75'>19,860</h3>}
+            renderStats={<h3 className='fw-bolder mb-75'>5</h3>}
           />
         </Col>
         <Col lg='3' sm='6'>
@@ -46,7 +46,7 @@ const UsersList = () => {
             color='warning'
             statTitle='Pending Users'
             icon={<UserX size={20} />}
-            renderStats={<h3 className='fw-bolder mb-75'>237</h3>}
+            renderStats={<h3 className='fw-bolder mb-75'>2</h3>}
           />
         </Col>
       </Row>

@@ -19,7 +19,7 @@ const UsersList = () => {
             color="primary"
             statTitle="  افراد عضو شده"
             icon={<User size={20} />}
-            renderStats={<h3 className="fw-bolder mb-75">21,459</h3>}
+            renderStats={<h3 className="fw-bolder mb-75">5</h3>}
           />
         </Col>
         <Col lg="4" sm="6">
@@ -27,7 +27,7 @@ const UsersList = () => {
             color="danger"
             statTitle="منتور ثبت شده"
             icon={<UserPlus size={20} />}
-            renderStats={<h3 className="fw-bolder mb-75">4,567</h3>}
+            renderStats={<h3 className="fw-bolder mb-75">0</h3>}
           />
         </Col>
         <Col lg="4" sm="6">
@@ -35,7 +35,7 @@ const UsersList = () => {
             color="success"
             statTitle=" افرادی که باهم هم مسیر شدند"
             icon={<UserCheck size={20} />}
-            renderStats={<h3 className="fw-bolder mb-75">19,860</h3>}
+            renderStats={<h3 className="fw-bolder mb-75">1</h3>}
           />
         </Col>
       </Row>
